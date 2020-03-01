@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coronavirus Calculator</title>
+	 <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-109579764-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("js", new Date), gtag("config", "UA-109579764-3")
+
+  </script>
+	<style>
+		#results {
+			visibility: hidden;
+		}
+
+		#results.visible {
+			visibility: visible;
+		}
+	</style>
+</head>
+<body>
+	<h1> The Coronavirus Calculator </h1>
+
+	<div id="inputcontainer">
+		<input type="number" id="latitude" name="latitude" min="-180" max="180">
+		<input type="number" id="longitude" name="longitude" min="-180" max="180">
+
+		<input type="button" value="Calculate!" onclick="calculate()">
+	</div>
+
+	<div id="results">
+		<p> The nearest incident to you is in <span id="locationName"></span> and caused <span id="reports"></span> out of the total <span id="count"></span> reports to date. </p>
+	</div>
+
+	<div id="about">
+		<p> <em>Disclaimer</em>: This is a website created <em>just for fun</em> by a guy on the internet, you should take your results with a grain of salt. </p>
+	</div>
+	<script src="scripts/script.min.js"></script>
+</body>
+</html>
